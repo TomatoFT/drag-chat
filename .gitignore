@@ -1,0 +1,8 @@
+.env
+
+/chat-web/node_modules
+/chat-service/venv
+/chat-service/env
+/chat-service/build
+/chat-service/dist
+/chat-service/tmp
