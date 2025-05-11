@@ -6,3 +6,5 @@
 /chat-service/build
 /chat-service/dist
 /chat-service/tmp
+
+node_modules/
