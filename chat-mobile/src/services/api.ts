@@ -1,6 +1,6 @@
 import { Chat, ChatCreate, ChatUpdate, Document, Message } from '../types/api';
 
-const API_URL = 'http://localhost:8000'; // Replace with your API URL
+const API_URL = process.env.API_URL || 'http://localhost:8123';
 
 class APIError extends Error {
   constructor(message: string) {

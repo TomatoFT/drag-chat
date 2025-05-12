@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Chat, Document, Message } from '../types';
 
-const API_BASE_URL = 'http://localhost:8123';
+const API_BASE_URL = process.env.API_URL || 'http://localhost:8123';
 
 const api = axios.create({
   baseURL: API_BASE_URL,

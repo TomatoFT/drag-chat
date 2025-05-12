@@ -1,0 +1,84 @@
+Project Description: RAG Chatbot Backend
+This project implements a Retrieval-Augmented Generation (RAG) chatbot that allows users to:
+
+Upload documents (PDF, TXT, DOCX, etc.)
+
+Ask questions based on uploaded documents
+
+Receive contextual answers using a combination of vector similarity search and a language model (e.g., OpenAI or Hugging Face models)
+
+The backend is built with FastAPI, and data is stored and managed in MongoDB (document metadata and QA history). Embeddings are stored in MongoDB or optionally in a vector database (e.g., Weaviate, Qdrant, or FAISS).
+
+📋 Milestone Breakdown
+🔹 Milestone 1: Project Setup & Docker Compose
+Initialize FastAPI project structure
+
+Set up Docker Compose:
+
+FastAPI backend service
+
+MongoDB container
+
+(Optional) Mongo Express for UI
+
+Configure MongoDB connection in FastAPI
+
+Create basic health check API
+
+🔹 Milestone 2: Document Upload & Processing
+Implement /upload endpoint:
+
+Accept PDF/DOCX/TXT uploads
+
+Save metadata to MongoDB
+
+Parse and clean document text (use PyMuPDF, python-docx, pdfminer, etc.)
+
+Chunk text into smaller pieces for embedding
+
+🔹 Milestone 3: Embedding & Storage
+Integrate with a language model to create embeddings (e.g., OpenAI, Hugging Face, Instructor-XL, etc.)
+
+Store embeddings and chunks into MongoDB (or external vector DB)
+
+Create utility to compute and store document embeddings on upload
+
+🔹 Milestone 4: Question Answering Endpoint
+Implement /ask endpoint:
+
+Accept user question and document ID(s)
+
+Fetch relevant chunks using similarity search (e.g., cosine similarity with embeddings)
+
+Generate answer using a language model (OpenAI GPT, LLaMA, etc.)
+
+Return answer + source chunks
+
+🔹 Milestone 5: Chat History & Metadata
+Store chat history (questions & answers) in MongoDB
+
+Enable query filtering by document or user
+
+Optional: Add basic user session support (user ID/token)
+
+🔹 Milestone 6: Testing & Cleanup
+Write unit tests for key endpoints (e.g., upload, ask)
+
+Clean and structure code into modules (e.g., api, services, utils)
+
+Add basic OpenAPI docs using FastAPI's @router.get("/docs")
+
+🧱 Suggested Tech Stack
+API: FastAPI
+
+Storage: MongoDB
+
+Embeddings: OpenAI API
+
+Vector Search: FAISS
+
+Document Parsing: PyMuPDF, pdfminer, python-docx
+
+Containerization: Docker Compose
+
+ORM: Motor or ODMantic (async MongoDB for FastAPI)

@@ -34,7 +34,7 @@ class QAService:
         # Create QA chain with context
         qa_chain = RetrievalQA.from_chain_type(
             llm=self.llm,
-            chain_type="refine",
+            chain_type="map_reduce",
             retriever=vectorstore.as_retriever(),
             return_source_documents=True
         )

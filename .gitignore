@@ -68,7 +68,6 @@ yarn.lock
 *.local
 *.secret
 *.bak
-*.tmp
 *.swp
 
 # === IDEs ===

@@ -25,11 +25,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
+    env_file:
+      - ./env/.env.chat.fe
     volumes:
       - ./chat-web:/app
-    depends_on:
-      - mongodb
-      - chat-service
 
   chat-service:
     build:
@@ -40,7 +39,7 @@ services:
     volumes:
       - ./chat-service:/app
     env_file:
-      - .env
+      - ./env/.env.chat.be
     depends_on:
       - mongodb
 
