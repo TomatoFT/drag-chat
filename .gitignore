@@ -1,10 +1,78 @@
-.env
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+*.pyzw
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+*.log
 
-/chat-web/node_modules
-/chat-service/venv
-/chat-service/env
-/chat-service/build
-/chat-service/dist
-/chat-service/tmp
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
 
+# PyInstaller
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VSCode Python extension
+.python-version
+
+# === TypeScript / Node.js ===
 node_modules/
+dist/
+build/
+lib/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# TypeScript cache
+*.tsbuildinfo
+
+# ESLint / Prettier
+.eslintcache
+.prettierignore
+.prettierrc
+
+# === Common ===
+.DS_Store
+.env
+*.local
+*.secret
+*.bak
+*.tmp
+*.swp
+
+# === IDEs ===
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
